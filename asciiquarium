@@ -1417,23 +1417,50 @@ sub add_jellyfish {
 	my ($old_ent, $anim) = @_;
 
 	# 1. Define the art and color masks from Step 1
+	my @left_tentacle_chars  = qw# ( ( [ / | #;
+	my @right_tentacle_chars = qw# ) ) ] \ | #;
+	my $tentacle_char_index = int(rand(scalar(@left_tentacle_chars)))-1;
+	my $l = $left_tentacle_chars[$tentacle_char_index];
+	my $r = $right_tentacle_chars[$tentacle_char_index];
+
 	my @jellyfish_image = (
-q{
+[
+qq{
   .-.
  (o o)
 '-' '-'
- | | |
- | | |
- | | |
+ $l $r $l
+ $r $l $r
+ $l $r $l
 },
-q{
+qq{
   .-.
  (o o)
 '-' '-'
- | | |
- | | |
- | | |
-});
+ $r $l $r
+ $l $r $l
+ $r $l $r
+}
+],
+[
+qq{
+  .-.
+ (o o)
+'-' '-'
+ $r $l $r
+ $l $r $l
+ $r $l $r
+},
+qq{
+  .-.
+ (o o)
+'-' '-'
+ $l $r $l
+ $r $l $r
+ $l $r $l
+},
+]
+);
 
 	my @jellyfish_mask = (
 q{
@@ -1491,11 +1518,11 @@ GRG GRG
 sub init_random_objects {
 	#return ( \&add_shark );
 	return (
-		\&add_ship,
-		\&add_whale,
-		\&add_monster,
-		\&add_big_fish,
-		\&add_shark,
+		#\&add_ship,
+		#\&add_whale,
+		#\&add_monster,
+		#\&add_big_fish,
+		#\&add_shark,
       \&add_jellyfish,
 	);
 }
