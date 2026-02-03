@@ -1518,12 +1518,12 @@ GRG GRG
 sub init_random_objects {
 	#return ( \&add_shark );
 	return (
-		#\&add_ship,
-		#\&add_whale,
-		#\&add_monster,
-		#\&add_big_fish,
-		#\&add_shark,
-      \&add_jellyfish,
+		\&add_ship,
+		\&add_whale,
+		\&add_monster,
+		\&add_big_fish,
+		\&add_shark,
+		\&add_jellyfish,
 	);
 }
 
