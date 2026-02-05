@@ -112,7 +112,6 @@ sub main {
 		add_castle($anim);
 		add_all_seaweed($anim);
 		add_all_fish($anim);
-		#add_scuba(undef, $anim);
 		random_object(undef, $anim);
 		
 		$anim->redraw_screen();
@@ -1606,12 +1605,12 @@ GRG GRG
 sub init_random_objects {
 	#return ( \&add_shark );
 	return (
-		#\&add_ship,
-		#\&add_whale,
-		#\&add_monster,
-		#\&add_big_fish,
-		#\&add_shark,
-		#\&add_jellyfish,
+		\&add_ship,
+		\&add_whale,
+		\&add_monster,
+		\&add_big_fish,
+		\&add_shark,
+		\&add_jellyfish,
 		\&add_scuba,
 	);
 }
