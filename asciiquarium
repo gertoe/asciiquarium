@@ -1902,7 +1902,7 @@ q{
                       _|_
                      /   |
  _ ? _______________/____|_______________
-
+( )?/
  (=<                      O   O   O    /
 (_)?\_________________________________/
 }
@@ -2150,11 +2150,11 @@ sub init_random_objects {
 		\&add_big_fish,
 		\&add_sword_fish,
 		\&add_shark,
+		\&add_submarine,
 		\&add_fishhook,
 		\&add_swan,
 		\&add_ducks,
 		\&add_dolphins,
-		\&add_submarine,
 	);
 }
 
